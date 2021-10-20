@@ -23,9 +23,11 @@ const FormTwo = () => {
                         className="form-control" 
                         type="text" 
                         name="firstname"
-                        onChange={formik.handleChange}
-                        value={formik.values.firstname}
-                        onBlur={formik.handleBlur}
+                        {...formik.getFieldProps('firstname')}
+
+                        // onChange={formik.handleChange}
+                        // value={formik.values.firstname}
+                        // onBlur={formik.handleBlur}
                     />
                     { formik.errors.firstname && formik.touched.firstname ? 
                       <span>{formik.errors.firstname}</span>  
